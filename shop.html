@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — Style Snap</title>
+  <meta name="description" content="Browse Style Snap's full collection of Gen-Z streetwear, sneakers, accessories and more."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    .product-img-placeholder { background: linear-gradient(135deg,rgba(155,93,229,0.3),rgba(0,180,216,0.3)); }
+    .p1 { background: linear-gradient(135deg,#9b5de5,#6a0dad); }
+    .p2 { background: linear-gradient(135deg,#00b4d8,#0077b6); }
+    .p3 { background: linear-gradient(135deg,#2a2a3a,#4a4a6a); }
+    .p4 { background: linear-gradient(135deg,#f72585,#9b5de5); }
+    .p5 { background: linear-gradient(135deg,#43aa8b,#264653); }
+    .p6 { background: linear-gradient(135deg,#f8961e,#f3722c); }
+    .p7 { background: linear-gradient(135deg,#4361ee,#3a0ca3); }
+    .p8 { background: linear-gradient(135deg,#7209b7,#560bad); }
+    .p9 { background: linear-gradient(135deg,#00b4d8,#9b5de5); }
+    .p10{ background: linear-gradient(135deg,#f72585,#00b4d8); }
+    .p11{ background: linear-gradient(135deg,#2a2a3a,#9b5de5); }
+    .p12{ background: linear-gradient(135deg,#43aa8b,#9b5de5); }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+    <div class="loader-ring"></div>
+    <span class="loader-text">STYLE SNAP</span>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Style Snap</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="dark-toggle" id="darkToggle" title="Toggle theme">☀️</button>
+    <button class="cart-btn" title="Cart">🛒<span class="cart-count">0</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- SHOP HERO -->
+<div class="shop-hero">
+  <div class="section-tag">🛍️ The Collection</div>
+  <h1 class="section-title" style="margin-top:0.5rem;">Shop All <span>Drops</span></h1>
+  <p style="color:rgba(240,240,255,0.6);margin-top:1rem;max-width:500px;margin-left:auto;margin-right:auto;">
+    Filter, find, and flex. Every piece engineered for the culture.
+  </p>
+</div>
+
+<!-- FILTERS -->
+<div style="padding:0 2rem 3rem;max-width:1200px;margin:0 auto;">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all" id="filterAll">All ✨</button>
+    <button class="filter-btn" data-filter="men" id="filterMen">Men 🧔</button>
+    <button class="filter-btn" data-filter="women" id="filterWomen">Women 👩</button>
+    <button class="filter-btn" data-filter="streetwear" id="filterStreet">Streetwear 🏙️</button>
+    <button class="filter-btn" data-filter="accessories" id="filterAcc">Accessories 💍</button>
+  </div>
+
+  <!-- PRODUCTS GRID -->
+  <div class="products-grid" id="shopGrid">
+
+    <div class="product-card reveal" data-category="streetwear">
+      <img src="img/product_hoodie.png" alt="Purple Oversized Hoodie" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Streetwear</p>
+        <h3 class="product-name">Purple Oversized Hoodie</h3>
+        <div class="product-price">$69.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="men">
+      <img src="img/product_cargo.png" alt="Baggy Cargo Pants" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Men</p>
+        <h3 class="product-name">Baggy Cargo Pants</h3>
+        <div class="product-price">$79.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="men">
+      <img src="img/product_jacket.png" alt="Y2K Bomber Jacket" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Men</p>
+        <h3 class="product-name">Y2K Bomber Jacket</h3>
+        <div class="product-price">$149.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="accessories">
+      <div class="product-img-placeholder p4">💍</div>
+      <div class="product-info">
+        <p class="product-category">Accessories</p>
+        <h3 class="product-name">Chunky Chain Necklace</h3>
+        <div class="product-price">$34.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="women">
+      <div class="product-img-placeholder p5">👗</div>
+      <div class="product-info">
+        <p class="product-category">Women</p>
+        <h3 class="product-name">Cropped Utility Vest</h3>
+        <div class="product-price">$54.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="women">
+      <div class="product-img-placeholder p6">👖</div>
+      <div class="product-info">
+        <p class="product-category">Women</p>
+        <h3 class="product-name">Wide Leg Flare Jeans</h3>
+        <div class="product-price">$89.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="accessories">
+      <div class="product-img-placeholder p7">🕶️</div>
+      <div class="product-info">
+        <p class="product-category">Accessories</p>
+        <h3 class="product-name">Retro Y2K Sunglasses</h3>
+        <div class="product-price">$24.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="streetwear">
+      <div class="product-img-placeholder p8">🧢</div>
+      <div class="product-info">
+        <p class="product-category">Streetwear</p>
+        <h3 class="product-name">Neon Snapback Cap</h3>
+        <div class="product-price">$39.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="men">
+      <img src="img/product_sneakers.png" alt="Electric Blue Chunky Sneakers" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Men</p>
+        <h3 class="product-name">Electric Blue Sneakers</h3>
+        <div class="product-price">$129.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="women">
+      <div class="product-img-placeholder p10">👚</div>
+      <div class="product-info">
+        <p class="product-category">Women</p>
+        <h3 class="product-name">Boxy Graphic Tee</h3>
+        <div class="product-price">$44.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="accessories">
+      <div class="product-img-placeholder p11">👜</div>
+      <div class="product-info">
+        <p class="product-category">Accessories</p>
+        <h3 class="product-name">Mini Crossbody Bag</h3>
+        <div class="product-price">$49.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="streetwear">
+      <div class="product-img-placeholder p12">🩳</div>
+      <div class="product-info">
+        <p class="product-category">Streetwear</p>
+        <h3 class="product-name">Mesh Layered Shorts</h3>
+        <div class="product-price">$59.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Style Snap</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 Style Snap. Made with 💜 for the next gen.</p>
+</footer>
+
+<button id="scrollTop" title="Back to top">↑</button>
+
+<!-- CHATBOT -->
+<button class="chatbot-fab" id="chatFab" title="Chat with Snap">💬</button>
+<div class="chatbot-window" id="chatWindow">
+  <div class="chatbot-header">
+    <div class="chatbot-header-info">
+      <div class="chatbot-avatar">🤖</div>
+      <div>
+        <div class="chatbot-name">Snap Bot</div>
+        <div class="chatbot-status">● Online</div>
+      </div>
+    </div>
+    <button class="chatbot-close" id="chatClose">✕</button>
+  </div>
+  <div class="chatbot-messages" id="chatMessages"></div>
+  <div class="chatbot-quick-btns">
+    <button class="quick-btn" data-q="What products do you have?">Products 👗</button>
+    <button class="quick-btn" data-q="How to order?">Order 🛒</button>
+    <button class="quick-btn" data-q="Shipping info">Shipping 🚀</button>
+    <button class="quick-btn" data-q="Contact info">Contact 📞</button>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" class="chatbot-input" id="chatInput" placeholder="Ask me anything..."/>
+    <button class="chatbot-send" id="chatSend">➤</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

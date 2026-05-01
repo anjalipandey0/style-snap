@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Style Snap — Snap Your Style</title>
+  <meta name="description" content="Style Snap is the ultimate Gen-Z fashion destination. Bold streetwear, Y2K fits, and curated drops — all in one place."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+    <div class="loader-ring"></div>
+    <span class="loader-text">STYLE SNAP</span>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Style Snap</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="dark-toggle" id="darkToggle" title="Toggle theme">☀️</button>
+    <button class="cart-btn" onclick="window.location='shop.html'" title="Cart">
+      🛒<span class="cart-count">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✨ New Drop — Spring 2026</div>
+    <h1 class="hero-title">
+      <span class="gradient-text">Snap</span> Your<br/>Style.
+    </h1>
+    <p class="hero-sub">Bold drops. Streetwear vibes. Zero limits. Dress like the algorithm can't keep up.</p>
+    <div class="hero-btns">
+      <a href="shop.html" class="btn-primary" id="shopNowBtn">Shop Now 🔥</a>
+      <a href="#featured" class="btn-outline" id="exploreBtn">Explore ↓</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>↓</span>
+    scroll to explore
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section" style="padding:3rem 2rem;">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num" data-val="50" data-suffix="K+">0</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
+    <div>
+      <div class="stat-num" data-val="200" data-suffix="+">0</div>
+      <div class="stat-label">Unique Styles</div>
+    </div>
+    <div>
+      <div class="stat-num" data-val="98" data-suffix="%">0</div>
+      <div class="stat-label">Satisfaction Rate</div>
+    </div>
+    <div>
+      <div class="stat-num" data-val="30" data-suffix="+">0</div>
+      <div class="stat-label">Countries Shipped</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section id="featured" style="padding:5rem 2rem;">
+  <div class="section-header reveal">
+    <p class="section-tag">🔥 Hot Right Now</p>
+    <h2 class="section-title">Featured <span>Drops</span></h2>
+  </div>
+  <div class="products-grid">
+
+    <div class="product-card reveal" data-category="streetwear">
+      <img src="img/product_hoodie.png" alt="Purple Oversized Hoodie" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Streetwear</p>
+        <h3 class="product-name">Purple Oversized Hoodie</h3>
+        <div class="product-price">$69.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="footwear">
+      <img src="img/product_sneakers.png" alt="Electric Blue Sneakers" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Footwear</p>
+        <h3 class="product-name">Electric Blue Chunky Sneakers</h3>
+        <div class="product-price">$129.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="streetwear">
+      <img src="img/product_cargo.png" alt="Baggy Cargo Pants" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Streetwear</p>
+        <h3 class="product-name">Baggy Cargo Pants</h3>
+        <div class="product-price">$79.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-category="outerwear">
+      <img src="img/product_jacket.png" alt="Y2K Bomber Jacket" class="product-img"/>
+      <div class="product-info">
+        <p class="product-category">Outerwear</p>
+        <h3 class="product-name">Y2K Bomber Jacket</h3>
+        <div class="product-price">$149.99</div>
+        <div class="product-actions">
+          <button class="add-cart-btn">Add to Cart 🛒</button>
+          <button class="wishlist-btn">♡</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="shop.html" class="btn-primary" id="viewAllBtn">View All Products →</a>
+  </div>
+</section>
+
+<!-- TRENDING SLIDER -->
+<section class="slider-section" style="padding:5rem 2rem;">
+  <div class="section-header reveal">
+    <p class="section-tag">🌀 Trending Now</p>
+    <h2 class="section-title">Vibe <span>Styles</span></h2>
+  </div>
+  <div class="slider-wrapper reveal">
+    <div style="overflow:hidden;">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide-item">
+          <div class="slide-icon">🧥</div>
+          <div class="slide-label">Gorpcore</div>
+          <div class="slide-desc">Outdoor meets street</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-icon">💜</div>
+          <div class="slide-label">Y2K Revival</div>
+          <div class="slide-desc">2000s aesthetic is back</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-icon">🖤</div>
+          <div class="slide-label">Dark Academia</div>
+          <div class="slide-desc">Moody & intellectual</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-icon">🏀</div>
+          <div class="slide-label">Sporty Luxe</div>
+          <div class="slide-desc">Athleisure elevated</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-icon">🌐</div>
+          <div class="slide-label">Cyber Punk</div>
+          <div class="slide-desc">Digital meets fashion</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-icon">🌸</div>
+          <div class="slide-label">Soft Girl</div>
+          <div class="slide-desc">Pastel &amp; feminine</div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" id="sliderPrev">←</button>
+      <button class="slider-btn" id="sliderNext">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="padding:5rem 2rem;text-align:center;background:radial-gradient(ellipse at center,rgba(155,93,229,0.15) 0%,transparent 70%);">
+  <div class="reveal">
+    <h2 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;margin-bottom:1rem;">
+      Ready to <span style="background:linear-gradient(135deg,#9b5de5,#00b4d8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Level Up?</span>
+    </h2>
+    <p style="color:rgba(240,240,255,0.6);margin-bottom:2rem;font-size:1.1rem;">Join 50,000+ style setters who snap first, trend later.</p>
+    <a href="shop.html" class="btn-primary" id="ctaShopBtn">Start Shopping 🚀</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Style Snap</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 Style Snap. Made with 💜 for the next gen.</p>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" title="Back to top">↑</button>
+
+<!-- CHATBOT -->
+<button class="chatbot-fab" id="chatFab" title="Chat with Snap">💬</button>
+<div class="chatbot-window" id="chatWindow">
+  <div class="chatbot-header">
+    <div class="chatbot-header-info">
+      <div class="chatbot-avatar">🤖</div>
+      <div>
+        <div class="chatbot-name">Snap Bot</div>
+        <div class="chatbot-status">● Online</div>
+      </div>
+    </div>
+    <button class="chatbot-close" id="chatClose">✕</button>
+  </div>
+  <div class="chatbot-messages" id="chatMessages"></div>
+  <div class="chatbot-quick-btns">
+    <button class="quick-btn" data-q="What products do you have?">Products 👗</button>
+    <button class="quick-btn" data-q="How to order?">Order 🛒</button>
+    <button class="quick-btn" data-q="Shipping info">Shipping 🚀</button>
+    <button class="quick-btn" data-q="Contact info">Contact 📞</button>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" class="chatbot-input" id="chatInput" placeholder="Ask me anything..."/>
+    <button class="chatbot-send" id="chatSend">➤</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
